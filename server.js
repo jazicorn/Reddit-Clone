@@ -35,7 +35,6 @@ app.set('view engine', 'hbs');
 
 
 // Routes
-// app.use('/', require('./routes/index.js'));
 require('./controllers/posts.js')(app);
 
 const port = process.env.PORT || 9000;
