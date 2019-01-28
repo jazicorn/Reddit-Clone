@@ -45,6 +45,7 @@ describe('Posts', function() {
                         done(err);
                     });
             })
+
             .catch(function (err) {
                 done(err);
             });
@@ -53,3 +54,6 @@ describe('Posts', function() {
         done(err);
     });
 });
+after(function () {
+    Post.findOneAndDelete(newPost);
+})
