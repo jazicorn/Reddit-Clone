@@ -36,7 +36,10 @@ app.set('view engine', 'hbs');
 
 // Routes
 require('./controllers/posts.js')(app);
+require('./controllers/comments.js')(app);
 
 const port = process.env.PORT || 9000;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
+module.exports = app;
